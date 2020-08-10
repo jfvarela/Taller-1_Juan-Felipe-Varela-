@@ -51,30 +51,27 @@ class Critter
 
     void affinityRelation()
     {
-       if (affinity == enemy.affinity)
+
+        switch (affinity == enemy.affinity)
         {
+            case (true) : 
             affinityMultiplier= 0.5f;
-        }
-       else if ((affinity=="dark" && enemy.affinity=="light") || (affinity=="fire" && enemy.affinity=="water")
-                (affinity=="wind" && enemy.affinity=="water") || (affinity=="wind" && enemy.affinity=="earth")
-                (affinity=="light" && enemy.affinity=="dark") || (affinity=="water" && enemy.affinity=="fire")
-                (affinity=="water" && enemy.affinity=="wind") || (affinity=="earth" && enemy.affinity=="wind")) 
-        {
-            affinityMultiplier = 2;
-        }
-        else if (affinity=="fire" && enemy.affinity=="earth")
-        {
+
+            case (affinity=="fire" && enemy.affinity=="earth"):
             affinityMultiplier = 0;
+
+            case ((affinity=="dark" && enemy.affinity=="light")||(affinity=="fire" && enemy.affinity=="water")||(affinity=="wind" && enemy.affinity=="water") || (affinity=="wind" && enemy.affinity=="earth")
+            ||(affinity=="light" && enemy.affinity=="dark")||(affinity=="water" && enemy.affinity=="fire")||(affinity=="water" && enemy.affinity=="wind")||(affinity=="earth" && enemy.affinity=="wind")):
+            affinityMultiplier = 2;
+
+            case (false):
+            affinityMultiplier = 1;
         }
-        else affinityMultiplier = 1;
+
     }
     void Damage()
     {
         damageValue = (baseAttack + skills.skillPower) * affinityMultiplier;
     }
-
-
-
-
 
 }
