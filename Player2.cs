@@ -9,7 +9,7 @@ class Player2 : Player
 
     void AddCritter ()
     {
-        while (count < 3)
+        while (count == 0)
         {
             crittersP2.add (new Critter[currentHp = critterMaster.hp]);
             break;
@@ -18,12 +18,16 @@ class Player2 : Player
         foreach (Critter acritter in crittersP2)
         {
             currentHp -= Player1.critterMaster.damageValue;
+            Console.WriteLine(currentHp);
             if(currentHp <= 0)
             {
                 crittersP1.add (Critter);
                 count+=1;
             }
         }
+        
+        Console.WriteLine(crittersP2);
+
     }
 
     

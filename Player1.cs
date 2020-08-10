@@ -18,12 +18,14 @@ class Player1 : Player
         foreach (Critter acritter in critters)
         {
             currentHp -= Player2.critterMaster.damageValue;
+            Console.WriteLine(currentHp);
             if(currentHp <= 0)
             {
                 crittersP2.add (acritter);
                 count+=1;
             }
         }
+        Console.WriteLine(crittersP1);
     }
 
     

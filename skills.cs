@@ -37,7 +37,11 @@ class skills
             string[] supportSkills= {"AtkUp","DefUp","SpdDwn"};
             Random randomNumberSupport= new Random.range(0,2);
             supportSkill= names[randomNumberSupport];
-            }    
+            }
+            else
+            {
+                Console.WriteLine("support skills full")
+            }
         }
 
         if (supportSkill == "AtkUp")
