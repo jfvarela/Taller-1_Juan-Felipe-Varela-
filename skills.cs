@@ -40,7 +40,7 @@ class skills
             }
             else
             {
-                Console.WriteLine("support skills full")
+                Console.WriteLine("support skills full");
             }
         }
 
