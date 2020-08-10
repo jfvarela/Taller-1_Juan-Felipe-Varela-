@@ -43,7 +43,7 @@ class skills
                 Console.WriteLine("support skills full");
             }
         }
-8
+
         if (supportSkill == "AtkUp")
         {
             skillPower += critter.baseAttack * 0.2;
