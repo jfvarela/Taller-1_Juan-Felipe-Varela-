@@ -22,6 +22,7 @@ class Player2 : Player
             if(currentHp <= 0)
             {
                 crittersP1.add (Critter);
+                crittersP2.remove (acritter);
                 count+=1;
             }
         }
